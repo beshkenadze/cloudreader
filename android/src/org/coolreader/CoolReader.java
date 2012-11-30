@@ -21,6 +21,7 @@ import org.coolreader.crengine.History;
 import org.coolreader.crengine.InterfaceTheme;
 import org.coolreader.crengine.L;
 import org.coolreader.crengine.Logger;
+import org.coolreader.crengine.N2EpdController;
 import org.coolreader.crengine.OptionsDialog;
 import org.coolreader.crengine.Properties;
 import org.coolreader.crengine.ReaderAction;
@@ -700,6 +701,7 @@ public class CoolReader extends Activity
 //		}
 		
 		mReaderView = new ReaderView(this, mEngine, props);
+		N2EpdController.n2MainActivity = this;
 
 		mScanner.setDirScanEnabled(props.getBool(ReaderView.PROP_APP_BOOK_PROPERTY_SCAN_ENABLED, true));
 		
